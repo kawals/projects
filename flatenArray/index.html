@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine-html.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/boot.min.js"></script>
+  <title>Flaten Array Unit Testing with Jasmine</title>
+  <script>
+    flatenArray = arr => arr.reduce((accum, value) => (Array.isArray(value)) ? accum.concat(flatenArray(value)) : accum.concat(value),[]);   
+    
+    describe("Flaten suite", function() {
+      it("It should flaten the array", function() {
+        expect(flatenArray([[1,2,[3]],4])).toEqual([1,2,3,4]);
+      });
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>

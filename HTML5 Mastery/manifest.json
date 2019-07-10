@@ -1,0 +1,8 @@
+{
+    "name": "New HTML5",  
+    "short_name": "New HTML5",
+    "lang": "en-US",
+    "start_url": "./",
+    "display": "standalone",
+    "theme_color": "yellow"
+}

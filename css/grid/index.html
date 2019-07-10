@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container {
+            display: grid;
+            height: 80vh;
+            border: 1px solid black;
+            /* grid-template-columns: 100px 200px; */
+
+            /* grid-template-columns: 100px 200px;    
+            grid-template-rows: 100px auto 100px; */
+            
+            /* grid-template-columns: [start] 100px [line-2] 200px[end];
+            grid-template-rows: [start]100px [line-2]100px[end]; */
+        
+            grid-template: 100px 200px / 150px 100px 200px;
+            /* grid-column-gap: 5px;
+            grid-row-gap: 10px; */
+
+            /* grid-gap: 20px;
+            justify-content: center;
+            justify-content: space-around;
+            align-content: flex-end; 
+            align-content: space-around; 
+            justify-items: stretch;
+            align-items: stretch;*/
+            justify-items: center;
+            align-items: center;
+        }
+        .cell-1 {
+            /* grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3; */
+
+            /* grid-row-start: start;
+            grid-row-end: line-2;
+            grid-column-start: start;
+            grid-column-end: line-2; */
+        }
+        .cell-1 {
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cell cell-1">cell 1</div>
+        <div class="cell cell-2">cell 2</div>
+        <div class="cell cell-3">cell 3</div>
+        <div class="cell cell-4">cell 4</div>
+        <div class="cell cell-5">cell 5</div>
+        <div class="cell cell-6">cell 6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.cell{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px 0;
+}
+.cell-1{
+    background-color: blueviolet;
+}
+.cell-2{
+    background-color: red;
+}
+.cell-3{
+    background-color: black;
+}
+.cell-4{
+    background-color: yellow;
+}
+.cell-5{
+    background-color: yellowgreen;
+}
+.cell-6{
+    background-color: coral;
+}

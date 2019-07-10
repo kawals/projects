@@ -1,0 +1,104 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Your title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name='theme-color' content='skyblue'>
+<!-- External Files loaded from the other tabs -->
+<link rel="manifest" href="manifest.json">
+<script src='aframe.js'></script>
+<style>
+    body{ background-color: skyblue;}
+</style>
+<h2>360 VR Panorama</h2>
+<a-scene embedded style='width:100%; height:300px'>
+    <a-sky src='pano.jpg'></a-sky>
+</a-scene>
+<a href='tel:+14152789999'>Call Me</a>
+<a href='whatsapp://send?text=Loot at my travel log'>Whatsapp</a>
+<br/><br/>
+<button onClick='speak();'>Speak</button>
+
+<script>
+    function speak() {
+        var voice = new SpeechSynthesisUtterance();
+        voice.text = "Kidda Agam, how are you doing?"
+        speechSynthesis.speak(voice);
+    }
+</script>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sapiente tempore? Sed saepe, totam sit vitae dolores molestias doloremque suscipit atque quisquam reprehenderit cum ex consectetur odio quasi. Quo, minima!</p>
+<blockquote cite="http://google.ca">
+    "Some quatation given by CEO or any famous personality"
+    <br/>
+    Knowledge
+</blockquote>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sapiente tempore? Sed saepe, totam sit vitae dolores molestias doloremque suscipit atque quisquam reprehenderit cum ex consectetur odio quasi. Quo, minima!</p>
+
+<small>small tag is for side notes</small>
+<br/>
+<abbr title="Software Development Kit">SDK</abbr>
+
+<dl>
+    <dt>Author Name</dt>
+    <dd>Agam</dd>
+    <dt>Twitter</dt>
+    <dd>@agam</dd>
+    <dt>Bio</dt>
+    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos ipsum placeat minus? Suscipit error, distinctio quia maiores magnam ipsa quasi iure. Expedita eveniet culpa cupiditate recusandae molestiae saepe doloremque?</dd>
+</dl>
+container: Grouping elements, it does not make any effect on screen or browsers  
+nav, header, footer, main
+article: unique info eg search results 
+section: is a part of something bigger container  
+aside: related to but not really imp
+
+
+<!-- images
+Remove metadata
+https://www.exifremove.com/
+Resize the images
+https://picresize.com/
+Compress the images 
+https://tinyjpg.com/ -->
+<br>
+<br>
+<br>
+<img src="assets/event-1x.jpg"
+     srcsest="assets/event-1x.jpg 1x,assets/event-2x.jpg 2x,assets/event-3x.jpg 3x"    
+     width="300" height="82"
+     alt="HTML5 event"
+    />
+
+<figure>
+    <img src="assets/event-1x.jpg" width="300" alt="Caption">
+    <figcaption>Always use figcaption if there is an image caption</figcaption>
+</figure>
+
+<audio src="assets/welcome.mp3" 
+    controls loop 
+    preload="metadata"
+    width="200" height="50">
+</audio>
+<!-- mp3 format is commonly used by all the screens -->
+<br/><br/><br/>
+<video src="assets/movie.mp4"
+    controls loop muted 
+    playsinline webkit-playsinline    
+    width="500"
+    poster="assets/event-1x.jpg"
+></video>
+<!-- mp4 format for full compatibility -->
+<br/>
+<br/>
+<video controls width="500">
+    <source src="assets/movie.webm" type="video/webm">
+    <source src="assets/movie.mp4" type="video/mp4">
+</video>
+<br/>
+<br/>
+
+<figure>
+        <video src="assets/animation.mp4"
+                autoplay >
+        </video>
+        <figcaption>Always use figcaption if there is an image caption</figcaption>
+    </figure>

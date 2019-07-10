@@ -1,0 +1,21 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+.max-viewport {
+  min-height: 100vh;
+}
+
+.text-underline {
+  width: 100px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.about-image,
+#filler {
+  background: url(../assets/city.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}

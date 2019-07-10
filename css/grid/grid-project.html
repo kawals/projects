@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Website</title>
+    <style>
+        *{padding:0; margin: 0px;}
+
+        .container{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .item {
+            flex: 00 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .item-1{
+            background: url(car.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .item-2{
+            background-color: royalblue;
+        }
+        .item-3{
+            background-color: yellow;
+        }
+        .item-4{
+            background-color: greenyellow;
+        }
+        .item-5{
+            background-color: wheat;
+        }
+        .item-6{
+            background-color: paleturquoise;
+        }
+        .item-7{
+            background-color: olivedrab;
+        }
+        .item-8{
+            background-color: goldenrod;
+        }
+        .item-9{
+            background-color: plum;
+        }
+        .item-10{
+            background-color: orangered;
+        }
+        @media screen and (min-width:576px) {
+            
+            .container{
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas: 
+                "one one two three three"
+                "one one four five five"
+                "six seven seven five five"
+                "six eight nine nine ten"
+            }
+            .item {
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            .item-1{
+                background: url(car.JPG);
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-size: 40px;
+                grid-area: one;
+            }
+            .item-2{
+                background-color: royalblue;
+                grid-area: two;
+            }
+            .item-3{
+                background-color: yellow;
+                grid-area: three;
+            }
+            .item-4{
+                background-color: greenyellow;
+                grid-area: four;
+            }
+            .item-5{
+                background-color: wheat;
+                grid-area: five;
+            }
+            .item-6{
+                background-color: paleturquoise;
+                grid-area: six;
+            }
+            .item-7{
+                background-color: olivedrab;
+                grid-area: seven;
+            }
+            .item-8{
+                background-color: goldenrod;
+                grid-area: eight;
+            }
+            .item-9{
+                background-color: plum;
+                grid-area: nine;
+            }
+            .item-10{
+                background-color: orangered;
+                grid-area: ten;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+        <div class="item item-10">item-10</div>
+    </div>
+</body>
+</html>

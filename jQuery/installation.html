@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>jQuery Test Hai</title>
+    <!-- Load the CDN first -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- If CDN fails to load, serve up the local version -->
+    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
+    <script>
+    $(document).ready(function(){
+      alert('Hi');
+    });
+      $(function(){
+        //$(selector).action();
+        $('#demo').hide();
+        $('.thing').fadeOut();
+        $('h1').css('color', 'red');
+        $('button').click(function(){
+          $('#box').fadeOut(1000);
+        });
+
+        $(h2, h3, h4).css('border', 'solid 1px red');
+        $('div#container').css('border', 'solid 1px red');
+        $('p.classname').css('border', 'solid 1px red');
+        $('li:first').css('border', 'solid 1px red');
+        $('p:even').css('border', 'solid 1px red');
+        $('div > p').css('border', 'solid 1px red'); // select only direct children, not grandchildren
+        $(':header').css('border', 'solid 1px red'); // select all headers (h1, 2,3,4,5,6)
+        $('div:contains("Brad")').css('border', 'solid 1px red');//contains 'Brad' in the text
+        $('p:even').css('border', 'solid 1px red');
+        // Event Methods
+        $('input').blure(function(){
+          if($(this).val()=="") {
+            $(this).css('border', 'solid 1px red');
+            $('#box').text('Forgot to add text?');
+          }
+        });
+
+        $('input').keydown(function(){
+          if($(this).val()!=='') {
+            $(this).css('border', 'solid 1px #777');
+            $('box').text('Thanks for that!');
+          }
+        });
+
+        $('#box').hover(function() {
+          $(this).text('You are hovered in!');
+        }, function() {
+          $(this).text('You are hovered out!');
+        }
+        );
+      });
+
+      //jQuery Chain
+      $('#box').fadeIn().css('color','red').delay(2000);
+
+      //jQuery show/ Hide Element
+      $(h1).hide();
+      $('p').fadeOut();
+      $('div.hidden').fadeIn(8000);
+
+      $('#box1').click(function(){
+        $(this).fadeTo(2000, 0.75, function(){
+          //animation is complete
+        });
+      });
+
+      $('div.hidden').slideUp();
+      $('div.hidden').slideDown();
+      $('div.hidden').slideToggle();
+
+      //jQuery Animation
+      $('#left').click(function(){
+        $('.box').animate({
+          left:"-=40px",
+          fontSize: "+=2px"
+        }, function(){
+          //animate is completed
+        });
+      });
+
+      //Manipulate css
+      $('.circle').css('background', '#333');
+      $('.circle').css({
+        'background': '#333',
+        'fontSize': '14px'
+      });
+
+      $('circle').addClass('circle2');
+      
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
